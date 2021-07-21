@@ -1,30 +1,30 @@
 <template>
   <div class="container my-3 mx-auto p-3 bg-gray-300">
-    <p>Form Validation</p>
+    <p class="text-xl text-bold">Form Validation</p>
     <div class="mb-2">
+      <label class="block">Email *</label>
       <input
       v-model="formValue.email"
       v-validate="'required|email'"
       type="email"
       maxlength="64"
-      placeholder="Email *"
       class="h-10 bg-gray-100 border p-2"
       name="email" />
       <span class="text-red-600">{{ errors.first('email') }}</span>
     </div>
     <div class="mb-2">
+      <label class="block">Password *</label>
       <input
       v-model="formValue.password"
       v-validate="passwordRule"
       type="password"
       maxlength="64"
-      placeholder="Password *"
       class="h-10 bg-gray-100 border p-2"
       name="password" />
       <span class="text-red-600">{{ errors.first('password') }}</span>
     </div>
     <div class="mb-2">
-      <label>Please select a color *</label>
+      <label class="block">Please select a color *</label>
       <select
         v-model="formValue.color"
         v-validate="'required'"
@@ -37,7 +37,7 @@
       <span class="text-red-600">{{ errors.first('color') }}</span>
     </div>
     <div class="mb-2">
-      <label>Please select a animal *</label>
+      <label class="block">Please select a animal *</label>
       <select
         v-model="formValue.animal"
         v-validate="'required'"
@@ -51,12 +51,12 @@
       <span class="text-red-600">{{ errors.first('animal') }}</span>
     </div>
     <div v-if="formValue.animal.includes('Tiger')" class="mb-2">
+      <label class="block">Type of Tiger</label>
       <input
       v-model="formValue.typeOfTiger"
       v-validate="'required'"
       type="text"
       maxlength="64"
-      placeholder="Type of Tiger *"
       class="h-10 bg-gray-100 border p-2"
       name="typeOfTiger"
       data-vv-as="type of tiger"

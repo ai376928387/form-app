@@ -19,6 +19,16 @@ $ npm run generate
 
 For detailed explanation on how things work, check out the [documentation](https://nuxtjs.org).
 
+## project tech stake 
+using vue.js with nuxt framework as main structure.
+UI side is using Tailwind.css allow more customization.
+validation part is using the [veevalidate](https://vee-validate.logaretm.com/v2)
+
+## todo 
+1. I didn't use any material ui library on the form components, if the project go big, we can move input, select, button, error message into common component library and abstract the styling and event which can be reusable.
+2. Button can add debounce function to prevent multiple click in short time. 
+3. Unit test code should be added to check the validation result is pass if any of the input is empty.
+
 ## Special Directories
 
 You can create the following extra directories, some of which have special behaviors. Only `pages` is required; you can delete them if you don't want to use their functionality.
